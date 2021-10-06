@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import useForm from "./useForm";
 import { Values } from "./types";
-import { CdsInput } from "@clr/react/input";
-import { CdsPassword } from "@clr/react/password";
-import { CdsButton } from "@clr/react/button";
-import { CdsModal, CdsModalActions, CdsModalContent, CdsModalHeader } from "@clr/react/modal";
+import { CdsInput } from "@cds/react/input";
+import { CdsPassword } from "@cds/react/password";
+import { CdsButton } from "@cds/react/button";
+import { CdsModal, CdsModalActions, CdsModalContent, CdsModalHeader } from "@cds/react/modal";
 
 const Form = () => {
   const [modalOpen, setModalOpen] = useState(false);

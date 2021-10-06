@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-import "normalize.css/normalize.css";
-import "@clr/core/global.css"; // pre-minified version breaks
-import "@clr/city/css/bundles/default.min.css";
+import "modern-normalize/modern-normalize.css";
+import "@cds/core/global.css"; // pre-minified version breaks
+import "@cds/city/css/bundles/default.min.css";
 import "./index.css";
 
 ReactDOM.render(
