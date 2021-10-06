@@ -28,6 +28,7 @@ const Form = () => {
   }
 
   function hideModal() {
+    console.log('ohai');
     const timer = setTimeout(() => {
       setModalOpen(false);
       clearTimeout(timer);
@@ -84,36 +85,30 @@ const Form = () => {
           </CdsButton>
         </div>
     </div>
-    {modalReady ? (
-      <div>
-        <CdsModal
-          hidden={!modalOpen}
-          onCloseChange={hideModal}
-        >
-          <CdsModalHeader>
-            <h3 cds-text="title" cds-first-focus="">
-              My Modal
-            </h3>
-          </CdsModalHeader>
-          <CdsModalContent>
-            <div cds-layout="vertical gap:md p-y:xs">
-              <p cds-text="body">Lorem Ipsum</p>
-            </div>
-          </CdsModalContent>
-          <CdsModalActions>
-            <div cds-layout="horizontal gap:sm align:right">
-              <CdsButton onClick={hideModal} action="outline">
-                Cancel
-              </CdsButton>
-              <CdsButton onClick={hideModal}>Ok</CdsButton>
-            </div>
-          </CdsModalActions>
-        </CdsModal>
-      </div>
-    ) : (
-      <br />
-    )};
-    </div>
+    <CdsModal
+      hidden={!modalOpen}
+      onCloseChange={hideModal}
+    >
+      <CdsModalHeader>
+        <h3 cds-text="title" cds-first-focus="">
+          My Modal
+        </h3>
+      </CdsModalHeader>
+      <CdsModalContent>
+        <div cds-layout="vertical gap:md p-y:xs">
+          <p cds-text="body">Lorem Ipsum</p>
+        </div>
+      </CdsModalContent>
+      <CdsModalActions>
+        <div cds-layout="horizontal gap:sm align:right">
+          <CdsButton onClick={hideModal} action="outline">
+            Cancel
+          </CdsButton>
+          <CdsButton onClick={hideModal}>Ok</CdsButton>
+        </div>
+      </CdsModalActions>
+    </CdsModal>
+  </div>
   );
 };
 
